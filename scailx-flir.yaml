@@ -1,10 +1,12 @@
 ##############################################################################
-# This is a template for a simple build configuration file.
-# this config only adds a few yocto packages to the main scailx-ml image.
+# This is a template for a Yocto BSP or Custom-override layer.
+# The layer in the "flir-layer" folder is included, and creates a new image based
+# on the default scailx-ml image with a few extra packages.
+# the layer could also be used to build special packages, or override distro settings.
 ##############################################################################
 
 header:
-  version: 16
+  version: 14
   includes:
     - repo: scailx
       file: scailx_scarthgap.yaml
@@ -16,10 +18,9 @@ repos:
     # use commit to pin the layer to a specific commit for repeatable builds, otherwise leave it to always use the latest from Scarthgap branch.
     # commit: 2f34f0238057d3f3094c0bcf5cbb726dc9e90577
 
+  flir-layer:
+    layers:
+      meta-scailx-flir:
+
 target:
   - scailx-ml
-
-local_conf_header:
-  # add packages to my image.
-  my-layer: |
-    CORE_IMAGE_EXTRA_INSTALL += "nginx"
