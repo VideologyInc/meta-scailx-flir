@@ -2,3 +2,4 @@
 /scailx
 /build
 /poky
+!/meta-scailx-flir
