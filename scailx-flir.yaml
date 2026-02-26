@@ -16,7 +16,8 @@ repos:
     url: https://github.com/VideologyInc/scailx_yocto.git
     branch: scarthgap
     # use commit to pin the layer to a specific commit for repeatable builds, otherwise leave it to always use the latest from Scarthgap branch.
-    commit: 62c2722a0ab7b506ec54d408eda7d6d7c1ee6c3e
+#    commit: 62c2722a0ab7b506ec54d408eda7d6d7c1ee6c3e
+    commit: c9991e0ce9854179485d34fa28940161969b0733
 
   flir-layer:
     layers:
